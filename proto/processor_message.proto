@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package pcbook;
+option go_package = "./pb";
+option java_package = "com.github.akkarimzai.grpc.pb";
+option java_multiple_files = true;
+
+
+import "memory_message.proto";
+
+message CPU {
+  // Brand of the CPU
+  string brand = 1;
+  // Name of the CPU
+  string name = 2;
+  // Number of cores
+  uint32 number_cores = 3;
+  // Number of threads
+  uint32 number_threads = 4;
+  // Frequency of the CPU
+  double min_ghz = 5;
+  // Frequency of the CPU
+  double max_ghz = 6;
+}
+
+message GPU {
+  // Brand of the GPU
+  string brand = 1;
+  // Name of the GPU
+  string name = 2;
+  // Frequency of the GPU
+  double min_ghz = 5;
+  // Frequency of the GPU
+  double max_ghz = 6;
+  Memory memory = 7;
+}
